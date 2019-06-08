@@ -1,0 +1,53 @@
+<section class="description__container" [ngStyle]="{'background-image': getDescriptionBackgroundImg(), 'background-position' : 'center', 'height' : '600px'}">
+    <div class="description__title">
+        <h2>Zastanawiasz się czy warto z nami podjąć współprace? <br><span>Zobacz sam:</span></h2>
+    </div>
+    <div class="description__content">
+        <div class="content__left">
+            <div class="content__item">
+                <button (click)="showMoneyCheck = !showMoneyCheck"><i class="fas fa-money-check-alt"></i></button>
+                <div class="item__description" [ngClass]="showMoneyCheck ? '' : 'shown'">
+                    <h4>NAJLEPSZE CENY W REGIONIE</h4>
+                    <p>Najwyższe ceny skupu złomu stalowego na Podlasiu</p>
+                </div>
+            </div>
+            <div class=" content__item ">
+                <button (click)="showDolly = !showDolly"><i class="fas fa-dolly "></i></button>
+                <div class="item__description" [ngClass]="showDolly ? 'shown' : ''">
+                    <h4>TRANSPORT</h4>
+                    <p>Posiadamy własną flotę pojazdów</p>
+                </div>
+            </div>
+            <div class="content__item ">
+                <button (click)="showHand = !showHand"><i class="fas fa-hand-holding "></i></button>
+                <div class="item__description" [ngClass]="showHand ? 'shown' : ''">
+                    <h4>KONTROLA ŁADUNKU</h4>
+                    <p>Kontrolujemy cały proces załadunku i rozładunku</p>
+                </div>
+            </div>
+        </div>
+        <div class="content__right ">
+            <div class="content__item ">
+                <button (click)="showFile = !showFile"><i class="fas fa-file-alt "></i></button>
+                <div class="item__description" [ngClass]="showFile ? 'shown' : ''">
+                    <h4>DOKUMENTY TRANSPORTOWE</h4>
+                    <p>Zapewniamy wszelkie dokumenty transportowe</p>
+                </div>
+            </div>
+            <div class="content__item ">
+                <button (click)="showCalendar = !showCalendar"><i class="fas fa-calendar-alt "></i></button>
+                <div class="item__description" [ngClass]="showCalendar ? 'shown' : ''">
+                    <h4>TERMINOWOŚĆ</h4>
+                    <p>Wszystkie dostawy realizujemy w terminie</p>
+                </div>
+            </div>
+            <div class="content__item ">
+                <button (click)="showHandshake = !showHandshake"><i class="fas fa-handshake "></i></button>
+                <div class="item__description" [ngClass]="showHandshake ? '' : 'shown'">
+                    <h4>JESTESTEŚMY ELASTYCZNI</h4>
+                    <p>Chcesz nawiązać współpracę, dogadajmy się!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

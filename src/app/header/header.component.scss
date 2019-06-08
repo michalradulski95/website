@@ -1,0 +1,40 @@
+.main__container {
+    display: flex;
+    align-items: center;
+    .main__description {
+        position: absolute;
+        left: 10%;
+        width: 800px;
+        font-family: 'Cormorant Garamond';
+        color: #ffffff;
+        background: rgba(0, 0, 0, 0.7);
+        padding: 30px 50px;
+        h1 {
+            font-size: 70px;
+            line-height: 0.9;
+        }
+        h3 {
+            font-size: 24px;
+            border-bottom: 1px solid #ffffff;
+            padding-bottom: 5px;
+        }
+        span {
+            color: #11a41c;
+        }
+    }
+    .description__btn {
+        width: 200px;
+        height: 40px;
+        border: none;
+        background: rgba(8, 3, 97, 1);
+        border-radius: 5px;
+        color: #ffffff;
+        font-family: 'Montserrat Alternates';
+        outline: none;
+        cursor: pointer;
+        .arrow__icon {
+            margin-left: 5px;
+            transition: .5s ease;
+        }
+    }
+}

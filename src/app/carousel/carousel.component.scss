@@ -1,0 +1,27 @@
+.carousel__container {
+    slide {
+        height: 300px;
+        img {
+            width: 100%;
+            position: relative;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .carousel-caption {
+            color: #ffffff;
+            padding: 30px;
+            margin: 70px;
+            background: rgba(0, 0, 0, 0.6);
+            font-family: 'Average', serif;
+            z-index: 0;
+            button {
+                width: 150px;
+                height: 35px;
+                background: none;
+                border: 1px solid #ffffff;
+                border-radius: 5px;
+                color: #ffffff;
+            }
+        }
+    }
+}
