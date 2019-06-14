@@ -1,0 +1,44 @@
+.buyout__component {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 0;
+}
+
+.buyout__firstrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px;
+}
+
+.buyout__secondrow {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 20px;
+    img {
+        width: 700px;
+    }
+}
+
+.description {
+    margin: 20px;
+    width: 400px;
+    h4 {
+        font-family: 'Cormorant Garamond';
+        font-size: 30px;
+        margin: 10px;
+        color: #11a41c;
+    }
+    li,
+    ul {
+        list-style: circle;
+        font-family: 'Average';
+        font-size: 16px;
+    }
+    li {
+        color: #080361;
+    }
+}

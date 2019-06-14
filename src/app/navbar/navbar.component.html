@@ -6,10 +6,9 @@
     </div>
     <div class="logo__icon">Logo</div>
     <ul class="nav__items">
-        <li class="item"><a [class.modified__color]='navModify'>Strona główna</a></li>
-        <li class="item"><a [class.modified__color]='navModify'>Skupujemy</a></li>
-        <li class="item"><a [class.modified__color]='navModify' routerLink="">Recykling Kabli</a></li>
-        <li class="item"><a [class.modified__color]='navModify' routerLink="">Cennik</a></li>
-        <li class="item"><a [class.modified__color]='navModify' routerLink="">Kontakt</a></li>
+        <li class="item"><a [class.modified__color]='navModify' (click)="goToMain()">Strona główna</a></li>
+        <li class="item"><a [class.modified__color]='navModify' (click)="goToBuyOut()">Skupujemy</a></li>
+        <li class="item"><a [class.modified__color]='navModify' (click)="goToPricelist()">Cennik</a></li>
+        <li class="item"><a [class.modified__color]='navModify' (click)="goToContact()">Kontakt</a></li>
     </ul>
 </nav>

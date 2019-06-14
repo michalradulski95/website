@@ -19,7 +19,8 @@ export class LocalizationComponent implements OnInit {
       basePath: '/assets/sdk',
       center: artMetal,
       zoom: 15,
-      source : 'raster'
+      source : 'raster',
+      
     });
     const marker = tomtom.L.marker(artMetal).addTo(map);
     marker.bindPopup('<b>Skup Złomu Art-metal</b>,<br> Towarowa 1, 15-007 Białystok').openPopup();

@@ -1,27 +1,33 @@
 @import url('https://fonts.googleapis.com/css?family=Average|Cormorant+Garamond|Montserrat+Alternates&display=swap');
-body {
-    margin: 0;
-    padding: 0;
+$tablet: 768px;
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content
+    }
 }
 
 .footer__wrapper {
     height: 150px;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     background: rgba(0, 0, 0, 0.9);
     color: #ffffff;
+    font-family: 'Cormorant Garamond';
+    position: absolute;
+    bottom: 0;
+    @include tablet {
+        height: 200px;
+    }
     h4 {
-        font-family: 'Montserrat Alternates';
         font-size: 20px;
-        color: rgb(84, 75, 255);
+        color: rgb(255, 255, 255);
     }
     p {
-        font-family: 'Cormorant Garamond';
         font-size: 18px;
     }
     span {
-        font-family: 'Cormorant Garamond';
         font-size: 22px;
         color: #11a41c;
     }

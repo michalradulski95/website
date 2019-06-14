@@ -1,6 +1,17 @@
+$tablet: 768px;
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content
+    }
+}
+
 .carousel__container {
     slide {
         height: 300px;
+        @include tablet {
+            height: 300px;
+            margin-bottom: -45px;
+        }
         img {
             width: 100%;
             position: relative;

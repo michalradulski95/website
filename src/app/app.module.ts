@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { HeaderComponent } from './header/header.component';
@@ -11,8 +11,7 @@ import { LocalizationComponent } from './localization/localization.component';
 import { CarouselComponent } from './carousel/carousel.component';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
-
-
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -24,7 +23,8 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
     AboutComponent,
     DescriptionComponent,
     LocalizationComponent,
-    CarouselComponent, 
+    CarouselComponent,
+    routingComponents, 
   ],
   imports: [
     BrowserModule,
@@ -32,7 +32,7 @@ import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
     CarouselModule.forRoot(),
     AngularFontAwesomeModule,
     ScrollToModule.forRoot(),
-  
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
