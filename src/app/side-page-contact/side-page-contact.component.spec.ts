@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SidePageSkupujemyComponent } from './side-page-skupujemy.component';
+import { SidePageContactComponent } from './side-page-contact.component';
 
-describe('SidePageSkupujemyComponent', () => {
-  let component: SidePageSkupujemyComponent;
-  let fixture: ComponentFixture<SidePageSkupujemyComponent>;
+describe('SidePageContactComponent', () => {
+  let component: SidePageContactComponent;
+  let fixture: ComponentFixture<SidePageContactComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SidePageSkupujemyComponent ]
+      declarations: [ SidePageContactComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SidePageSkupujemyComponent);
+    fixture = TestBed.createComponent(SidePageContactComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

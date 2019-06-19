@@ -1,8 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
 
+$phone: 425px;
+@mixin phone () {
+    @media (max-width: #{$phone}) {
+        @content
+    }
+}
+
 html {
     min-height: 100%;
     position: relative;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 body {

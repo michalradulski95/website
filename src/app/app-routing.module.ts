@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { SidePageCennikComponent } from './side-page-cennik/side-page-cennik.component';
+import { SidePagePricelistComponent } from './side-page-pricelist/side-page-pricelist.component';
 import { MainPageComponent } from './main-page/main-page.component';
-import { SidePageKontaktComponent } from './side-page-kontakt/side-page-kontakt.component';
-import { SidePageSkupujemyComponent } from './side-page-skupujemy/side-page-skupujemy.component';
+import { SidePageContactComponent } from './side-page-contact/side-page-contact.component';
+import { SidePageBuyoutComponent } from './side-page-buyout/side-page-buyout.component';
 
 const routes: Routes = [
-  {path: 'priceList', component: SidePageCennikComponent},
-  {path: 'buyOut', component: SidePageSkupujemyComponent},
-  {path: 'contact', component: SidePageKontaktComponent},
+  {path: 'priceList', component: SidePagePricelistComponent},
+  {path: 'buyOut', component: SidePageBuyoutComponent},
+  {path: 'contact', component: SidePageContactComponent},
   {path: '', pathMatch: 'full', component: MainPageComponent}
 ];
 
@@ -18,4 +18,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingComponents = [SidePageCennikComponent, MainPageComponent, SidePageKontaktComponent, SidePageSkupujemyComponent]
+export const routingComponents = [SidePagePricelistComponent, MainPageComponent, SidePageContactComponent, SidePageBuyoutComponent]

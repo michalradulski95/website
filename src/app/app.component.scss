@@ -6,6 +6,13 @@ $tablet: 768px;
     }
 }
 
+$phone: 425px;
+@mixin phone {
+    @media (max-width: #{$phone}) {
+        @content
+    }
+}
+
 .footer__wrapper {
     height: 150px;
     width: 100%;
@@ -19,6 +26,10 @@ $tablet: 768px;
     bottom: 0;
     @include tablet {
         height: 200px;
+    }
+    @include phone {
+        height: 500px;
+        flex-direction: column;
     }
     h4 {
         font-size: 20px;
@@ -36,8 +47,18 @@ $tablet: 768px;
         display: flex;
         flex-direction: row;
         margin: 0 20px;
+        @include phone {
+            flex-direction: column;
+            width: 300px;
+        }
     }
     .column__title {
+        margin: 0 20px;
+    }
+}
+
+.column__description {
+    @include phone {
         margin: 0 20px;
     }
 }

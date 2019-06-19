@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SidePageKontaktComponent } from './side-page-kontakt.component';
+import { SidePageBuyoutComponent } from './side-page-buyout.component';
 
-describe('SidePageKontaktComponent', () => {
-  let component: SidePageKontaktComponent;
-  let fixture: ComponentFixture<SidePageKontaktComponent>;
+describe('SidePageBuyoutComponent', () => {
+  let component: SidePageBuyoutComponent;
+  let fixture: ComponentFixture<SidePageBuyoutComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SidePageKontaktComponent ]
+      declarations: [ SidePageBuyoutComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SidePageKontaktComponent);
+    fixture = TestBed.createComponent(SidePageBuyoutComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

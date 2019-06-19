@@ -5,6 +5,13 @@ $tablet: 768px;
     }
 }
 
+$phone: 425px;
+@mixin phone {
+    @media (max-width: #{$phone}) {
+        @content
+    }
+}
+
 .carousel__container {
     slide {
         height: 300px;
@@ -12,11 +19,17 @@ $tablet: 768px;
             height: 300px;
             margin-bottom: -45px;
         }
+        @include phone {
+            height: 190px;
+        }
         img {
             width: 100%;
             position: relative;
             top: 50%;
             transform: translateY(-50%);
+            @include phone {
+                height: 300px;
+            }
         }
         .carousel-caption {
             color: #ffffff;
@@ -25,6 +38,16 @@ $tablet: 768px;
             background: rgba(0, 0, 0, 0.6);
             font-family: 'Average', serif;
             z-index: 0;
+            h3 {
+                @include phone {
+                    font-size: 10px;
+                }
+            }
+            @include phone {
+                display: initial !important;
+                font-size: 10px;
+                margin: 40px;
+            }
             button {
                 width: 150px;
                 height: 35px;
@@ -32,6 +55,12 @@ $tablet: 768px;
                 border: 1px solid #ffffff;
                 border-radius: 5px;
                 color: #ffffff;
+                cursor: pointer;
+                outline: none;
+                @include phone {
+                    width: 100px;
+                    height: 25px;
+                }
             }
         }
     }

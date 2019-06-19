@@ -1,0 +1,61 @@
+$phone: 425px;
+@mixin phone () {
+    @media (max-width: #{$phone}) {
+        @content
+    }
+}
+
+.pricelist__component {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    padding: 100px 0;
+    h4 {
+        font-family: 'Average';
+        font-size: 20px;
+        margin: 10px;
+        color: rgba(8, 3, 97, 1);
+    }
+    p {
+        font-family: 'Cormorant Garamond';
+        font-size: 25px;
+        margin: 10px;
+    }
+    span {
+        color: #11a41c;
+    }
+    h2 {
+        font-family: 'Cormorant Garamond';
+        font-size: 40px;
+        margin: 20px;
+    }
+}
+
+.pricelist__heading {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricelist__table {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include phone {
+        height: 1100px;
+    }
+    td,
+    th {
+        border-bottom: 1px solid rgba(8, 3, 97, .3);
+    }
+    th {
+        font-family: 'Cormorant Garamond';
+        font-size: 20px;
+    }
+    td {
+        font-family: 'Average';
+        font-size: 15px;
+    }
+}

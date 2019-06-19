@@ -1,17 +1,49 @@
+$phone: 425px;
+@mixin phone {
+    @media (max-width: #{$phone}) {
+        @content
+    }
+}
+
 .nav__menu {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     position: fixed;
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     border-bottom: 1px solid #ffffff;
     box-shadow: 0px 18px 20px -6px rgba(0, 0, 0, .2);
     z-index: 1;
     transition: 0.5s ease;
     background: rgba(0, 0, 0, .6);
+    @include phone {
+        width: 425px;
+        flex-direction: column;
+        align-items: center;
+    }
     .hamburger__icon {
-        display: none;
+        border-radius: 5px;
+        padding: 5px;
+        visibility: hidden;
+        @include phone {
+            visibility: visible;
+        }
+        .first__line,
+        .second__line,
+        .third__line {
+            border: 2px solid rgba(255, 255, 255, 0.9);
+            border-radius: 5px;
+            height: 2px;
+            width: 30px;
+            margin: 5px 0;
+            background: #ffffff;
+            transition: .5s ease;
+        }
+        .second__line {
+            width: 20px;
+            transition: none;
+        }
     }
     .logo__icon {
         margin: 10px;
@@ -23,10 +55,28 @@
         display: flex;
         margin: 10px;
         padding: 0;
+        @include phone {
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            top: 100%;
+            background: rgba(0, 0, 0, .6);
+            width: 100%;
+            margin: 0;
+            visibility: hidden;
+            opacity: 0;
+            transition: 0.5s ease;
+            z-index: 999;
+        }
         .item {
             cursor: pointer;
             margin: 0 20px;
             font-family: 'Montserrat Alternates', sans-serif;
+            @include phone() {
+                margin: 20px;
+                border-bottom: 1px solid #ffffff;
+                padding: 5px 0;
+            }
             a {
                 transition: 0.5s ease;
                 text-decoration: none;
@@ -47,7 +97,34 @@
 .modified__color {
     color: #000000 !important;
     transition: 0.5s ease;
+    @include phone() {
+        color: #11a41c;
+    }
     &:hover {
         color: #11a41c !important;
     }
+}
+
+.active {
+    color: #11a41c !important;
+}
+
+.hamburgeractive {
+    visibility: visible !important;
+    opacity: 1 !important;
+    transition: 0.5s ease;
+}
+
+.hamburgerclose1 {
+    transition: .5s ease;
+    transform: translateY(5px) rotate(45deg);
+}
+
+.hamburgerclose2 {
+    visibility: hidden;
+}
+
+.hamburgerclose3 {
+    transition: .5s ease;
+    transform: translateY(-13px) rotate(-45deg);
 }

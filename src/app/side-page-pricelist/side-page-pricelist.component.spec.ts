@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SidePageCennikComponent } from './side-page-cennik.component';
+import { SidePagePricelistComponent } from './side-page-pricelist.component';
 
-describe('SidePageCennikComponent', () => {
-  let component: SidePageCennikComponent;
-  let fixture: ComponentFixture<SidePageCennikComponent>;
+describe('SidePagePricelistComponent', () => {
+  let component: SidePagePricelistComponent;
+  let fixture: ComponentFixture<SidePagePricelistComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ SidePageCennikComponent ]
+      declarations: [ SidePagePricelistComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SidePageCennikComponent);
+    fixture = TestBed.createComponent(SidePagePricelistComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

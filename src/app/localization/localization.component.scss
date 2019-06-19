@@ -1,4 +1,26 @@
+$tablet: 768px;
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content
+    }
+}
+
+$phone: 425px;
+@mixin phone {
+    @media (max-width: #{$phone}) {
+        @content
+    }
+}
+
 #map {
     height: 450px;
     width: 100%;
+    @include tablet {
+        height: 300px;
+        margin-bottom: 50px;
+    }
+    @include phone {
+        height: 250px;
+        margin-bottom: 340px;
+    }
 }

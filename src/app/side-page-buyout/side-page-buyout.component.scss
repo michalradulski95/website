@@ -1,25 +1,42 @@
+$phone: 425px;
+@mixin phone () {
+    @media (max-width: #{$phone}) {
+        @content
+    }
+}
+
 .buyout__component {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 100px 0;
+    @include phone {
+        margin-bottom: 300px;
+    }
 }
 
-.buyout__firstrow {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    margin: 20px;
-}
-
+.buyout__firstrow,
 .buyout__secondrow {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
     margin: 20px;
+    flex-wrap: wrap;
+    img {
+        @include phone {
+            width: 400px;
+        }
+    }
+}
+
+.buyout__secondrow {
     img {
         width: 700px;
+        @include phone {
+            width: 400px;
+        }
     }
 }
 

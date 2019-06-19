@@ -5,12 +5,32 @@ $tablet: 768px;
     }
 }
 
+$phone: 425px;
+@mixin phone () {
+    @media (max-width: #{$phone}) {
+        @content
+    }
+}
+
+$exs-phone: 375px;
+@mixin exs () {
+    @media (max-width: #{$exs-phone}) {
+        @content
+    }
+}
+
 .description__container {
     display: flex;
     flex-direction: column;
     align-items: center;
     @include tablet {
         height: 700px !important;
+    }
+    @include phone {
+        height: 1200px !important;
+    }
+    @include exs {
+        height: 1350px !important;
     }
     h2,
     h4 {
@@ -30,6 +50,9 @@ $tablet: 768px;
         display: flex;
         flex-direction: row;
         margin: 40px 0;
+        @include phone {
+            flex-wrap: wrap;
+        }
         .content__item {
             display: flex;
             flex-direction: row;

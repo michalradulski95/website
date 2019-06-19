@@ -5,6 +5,13 @@ $tablet: 768px;
     }
 }
 
+$phone: 425px;
+@mixin phone {
+    @media (max-width: #{$phone}) {
+        @content
+    }
+}
+
 .main__container {
     display: flex;
     align-items: center;
@@ -21,14 +28,24 @@ $tablet: 768px;
         @include tablet {
             width: 500px;
         }
+        @include phone {
+            width: 280px;
+            padding: 20px;
+        }
         h1 {
             font-size: 70px;
             line-height: 0.9;
+            @include phone {
+                font-size: 50px;
+            }
         }
         h3 {
             font-size: 24px;
             border-bottom: 1px solid #ffffff;
             padding-bottom: 5px;
+            @include phone {
+                font-size: 20px;
+            }
         }
         span {
             color: #11a41c;
