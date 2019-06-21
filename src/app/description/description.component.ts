@@ -13,7 +13,7 @@ export class DescriptionComponent implements OnInit {
   }
 
   getDescriptionBackgroundImg() {
-    return `url(/assets/images/4.jpg)`
+    return `url(assets/images/4.jpg)`
   }
 
   showMoneyCheck = false;
