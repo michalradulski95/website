@@ -1,14 +1,14 @@
 <nav class="nav__menu" [class.modified__background]='navModify'>
     <div class="hamburger__icon" (click)="showItems = !showItems">
-        <div class="first__line" [ngClass]="showItems ? '' : 'hamburgerclose1'"></div>
-        <div class="second__line" [ngClass]="showItems ? '' : 'hamburgerclose2'"></div>
-        <div class="third__line" [ngClass]="showItems ? '' : 'hamburgerclose3'"></div>
+        <div class="first__line" [ngClass]="showItems ? 'hamburgerclose1' : ''"></div>
+        <div class="second__line" [ngClass]="showItems ? 'hamburgerclose2' : ''"></div>
+        <div class="third__line" [ngClass]="showItems ? 'hamburgerclose3' : ''"></div>
     </div>
     <div class="logo__icon"></div>
-    <ul class="nav__items" [ngClass]="showItems ? '' : 'hamburgeractive'">
-        <li class="item"><a (click)="goToMain(); item1 = !item1; item1Clicked()" [ngClass]="{'modified__color': navModify, 'active' : item1}">Strona główna</a></li>
-        <li class="item"><a (click)="goToBuyOut(); item2 = !item2; item2Clicked()" [ngClass]="{'modified__color': navModify, 'active' : item2}">Skupujemy</a></li>
-        <li class="item"><a (click)="goToPricelist(); item3 = !item3;  item3Clicked()" [ngClass]="{'modified__color': navModify, 'active' : item3}">Cennik</a></li>
-        <li class="item"><a (click)="goToContact(); item4 = !item4;  item4Clicked()" [ngClass]="{'modified__color': navModify, 'active' : item4}">Kontakt</a></li>
+    <ul class="nav__items" [ngClass]="{'hamburgeractive' : showItems}">
+        <li class="item"><a (click)="goToMain(); item1 = !item1; item1Clicked(); showItems = !showItems" [ngClass]="{'modified__color': navModify, 'active' : item1}">Strona główna</a></li>
+        <li class="item"><a (click)="goToBuyOut(); item2 = !item2; item2Clicked(); showItems = !showItems" [ngClass]="{'modified__color': navModify, 'active' : item2}">Skupujemy</a></li>
+        <li class="item"><a (click)="goToPricelist(); item3 = !item3;  item3Clicked(); showItems = !showItems" [ngClass]="{'modified__color': navModify, 'active' : item3}">Cennik</a></li>
+        <li class="item"><a (click)="goToContact(); item4 = !item4;  item4Clicked(); showItems = !showItems" [ngClass]="{'modified__color': navModify, 'active' : item4}">Kontakt</a></li>
     </ul>
 </nav>

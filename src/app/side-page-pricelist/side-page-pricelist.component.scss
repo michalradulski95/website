@@ -5,18 +5,28 @@ $phone: 425px;
     }
 }
 
+$exs-phone: 375px;
+@mixin exs () {
+    @media (max-width: #{$exs-phone}) {
+        @content
+    }
+}
+
 .pricelist__component {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100%;
     align-items: center;
-    padding: 100px 0;
+    padding: 90px 0;
+    @include exs() {
+        margin-bottom: 150px;
+    }
     h4 {
         font-family: 'Average';
-        font-size: 20px;
-        margin: 10px;
+        font-size: 16px;
         color: rgba(8, 3, 97, 1);
+        margin: 0;
     }
     p {
         font-family: 'Cormorant Garamond';
@@ -37,12 +47,14 @@ $phone: 425px;
     text-align: center;
     display: flex;
     flex-direction: column;
+    margin: 20px;
 }
 
 .pricelist__table {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
     @include phone {
         height: 1100px;
     }

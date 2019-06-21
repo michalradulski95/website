@@ -12,14 +12,15 @@ $phone: 425px;
     flex-wrap: wrap;
     align-items: center;
     width: 100%;
-    margin: 100px 0;
+    padding: 90px 0;
     @include phone {
-        margin-bottom: 400px;
+        margin-bottom: 300px;
     }
     h2 {
         font-family: 'Cormorant Garamond';
         font-size: 50px;
-        margin: 20px 0;
+        margin: 0;
+        text-align: center;
     }
     p {
         font-family: 'Average';
@@ -30,10 +31,14 @@ $phone: 425px;
 
 .contact__left,
 .contact__right {
-    margin: 40px;
+    margin: 20px;
 }
 
 #map {
     height: 450px;
     width: 500px;
+    @include phone {
+        width: 300px;
+        height: 300px;
+    }
 }

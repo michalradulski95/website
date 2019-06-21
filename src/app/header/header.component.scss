@@ -15,6 +15,9 @@ $phone: 425px;
 .main__container {
     display: flex;
     align-items: center;
+    @include phone {
+        justify-content: center;
+    }
     .main__description {
         display: flex;
         flex-direction: column;
@@ -31,6 +34,7 @@ $phone: 425px;
         @include phone {
             width: 280px;
             padding: 20px;
+            position: initial;
         }
         h1 {
             font-size: 70px;

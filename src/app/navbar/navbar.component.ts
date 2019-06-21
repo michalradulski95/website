@@ -73,7 +73,7 @@ export class NavbarComponent implements OnInit {
     this.item2 = false;
   }
 
-  showItems : boolean = true;
+  showItems : boolean = false;
 
  
 
