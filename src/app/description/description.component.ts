@@ -12,7 +12,7 @@ export class DescriptionComponent implements OnInit {
   ngOnInit() {
   }
 
-  descriptionBackgroundImg = './assets/images/4.jpg';
+  descriptionBackgroundImg = '../assets/images/4.jpg';
 
   showMoneyCheck = false;
   showDolly = false;

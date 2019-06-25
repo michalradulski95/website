@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
   }
   hover;
 
-headerBackgroundImg = './assets/images/1.jpg';
+
   
 
 
