@@ -13,8 +13,10 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
   hover;
-  getHeaderBackgroundImg() {
-    return `url(/assets/images/1.jpg)`
-  }
+
+headerBackgroundImg = '../assets/images/1.jpg';
+  
+
+
 
 }
